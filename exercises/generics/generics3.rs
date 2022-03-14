@@ -10,15 +10,15 @@
 
 // Execute 'rustlings hint generics3' for hints!
 
-use std::fmt::Display;
+// I AM NOT DONE
 
-pub struct ReportCard<T: Display> {
-    pub grade: T,
+pub struct ReportCard {
+    pub grade: f32,
     pub student_name: String,
     pub student_age: u8,
 }
 
-impl<T: Display> ReportCard<T> {
+impl ReportCard {
     pub fn print(&self) -> String {
         format!("{} ({}) - achieved a grade of {}",
             &self.student_name, &self.student_age, &self.grade)
@@ -46,7 +46,7 @@ mod tests {
     fn generate_alphabetic_report_card() {
         // TODO: Make sure to change the grade here after you finish the exercise.
         let report_card = ReportCard {
-            grade: "A+",
+            grade: 2.1,
             student_name: "Gary Plotter".to_string(),
             student_age: 11,
         };
